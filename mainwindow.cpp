@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     tests->append(new Test1());
     tests->append(new Test2());
 
-    connect(this,SIGNAL(window_loaded()),this,SLOT(showStartDialog()));
+    QTimer::singleShot(0,this,SLOT(showStartDialog()));
 }
 
 MainWindow::~MainWindow()
@@ -22,10 +22,18 @@ void MainWindow::showStartDialog(){
 
     QMessageBox msgBox(this);
     msgBox.setWindowTitle( "Avvia Test" );
-    msgBox.setText("Questo Test serve per valutare alcune proprietà delle Interfaccie Utente");
-    msgBox.addButton("Avvia il Test",QMessageBox::AcceptRole);
+    msgBox.setText("Questo Test serve per valutare alcune proprietà delle Interfaccie Utente ( UI )\n"
+                   "Ogni schermata contiene un diverso test, segui bene le istruzioni!\n"
+                   "Quando sei pronto premi \"Avvia il Test\" per iniziare." );
+    QAbstractButton* avvia = msgBox.addButton("Avvia il Test",QMessageBox::AcceptRole);
     msgBox.addButton("Esci",QMessageBox::RejectRole);
 
     msgBox.exec();
+
+    if(msgBox.clickedButton() == avvia){
+
+    }else{
+        this->close();
+    }
 
 }

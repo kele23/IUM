@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QList>
 #include <QMessageBox>
+#include <QTimer>
 #include "test.h"
 #include "test1.h"
 #include "test2.h"
