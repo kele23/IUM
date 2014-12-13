@@ -29,10 +29,10 @@ private:
     int currentTest;
 
     //Metodi Privati
-    void showStartDialog();
 
+//SLOT PRIVATI
 private slots:
-    void startDialogClosed(QAbstractButton* );
+    void showStartDialog();
 };
 
 #endif // MAINWINDOW_H
