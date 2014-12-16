@@ -4,6 +4,7 @@
 #include <QString>
 #include <QWidget>
 #include <QObject>
+#include <QLabel>
 
 /**
  * @brief Interfaccia Test, definisce i metodi generici che ogni classe Test deve implementare
@@ -32,7 +33,7 @@ public:
      * @return
      */
     virtual QWidget* getNext(){
-        return NULL;
+        return new QLabel("Hi!");
     }
 
     /**

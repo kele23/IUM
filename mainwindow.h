@@ -7,8 +7,7 @@
 #include <QTimer>
 #include <QLayoutItem>
 #include "test.h"
-#include "test1.h"
-#include "test2.h"
+#include "startdialog.h"
 
 namespace Ui {
 class MainWindow;
@@ -37,6 +36,7 @@ private:
 //SLOT PRIVATI
 private slots:
     void showStartDialog();
+    void on_bAvanti_clicked();
 };
 
 #endif // MAINWINDOW_H

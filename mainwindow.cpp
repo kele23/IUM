@@ -7,8 +7,10 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    tests->append(new Test1());
-    tests->append(new Test2());
+    ui->riepilogoWidget->hide();
+
+    tests->append(new Test());
+    tests->append(new Test());
 
     QTimer::singleShot(0,this,SLOT(showStartDialog()));
 }
@@ -20,34 +22,25 @@ MainWindow::~MainWindow()
 
 void MainWindow::showStartDialog(){
 
-    QMessageBox msgBox(this);
-    msgBox.setWindowTitle( "Avvia Test" );
-    msgBox.setText("Questo Test serve per valutare alcune proprietà delle Interfaccie Utente ( UI )\n"
-                   "Ogni schermata contiene un diverso test, segui bene le istruzioni!\n"
-                   "Quando sei pronto premi \"Avvia il Test\" per iniziare." );
-    QAbstractButton* avvia = msgBox.addButton("Avvia il Test",QMessageBox::AcceptRole);
-    msgBox.addButton("Esci",QMessageBox::RejectRole);
-
-    msgBox.exec();
-
-    if(msgBox.clickedButton() == avvia){
-        currentItem = tests->at(currentTest)->getNext();
-        ui->contentLayout->addWidget(currentItem);
-        tests->at(currentTest)->widgetShowed();
-    }else{
-        this->close();
-    }
+    StartDialog *startDialog = new StartDialog(this);
+    connect(startDialog,SIGNAL(accepted()),this,SLOT(on_bAvanti_clicked()));
+    connect(startDialog,SIGNAL(rejected()),this,SLOT(close()));
+    startDialog->show();
 
 }
 
 void MainWindow::on_bAvanti_clicked()
 {
-    if(!tests->at(currentTest)->haveNext())
+    if(currentItem != NULL)
+        ui->contentLayout->removeWidget(currentItem);
+
+    while(currentTest < tests->size() && !tests->at(currentTest)->haveNext())
         currentTest = currentTest+1;
 
-    if(currentTest < tests->size())
+    if(currentTest < tests->size()){
         currentItem = tests->at(currentTest)->getNext();
         ui->contentLayout->addWidget(currentItem);
+    }
     else
-        //showRiepilogo();
+        ui->riepilogoWidget->show();
 }
