@@ -5,6 +5,7 @@
 #include <QWidget>
 #include <QObject>
 #include <QLabel>
+#include <QTime>
 
 /**
  * @brief Interfaccia Test, definisce i metodi generici che ogni classe Test deve implementare
@@ -20,6 +21,7 @@ public:
     virtual QString getResult(){
         return QString();
     }
+
     /**
      * @brief haveNext Controlla se il Test contiene altri Widget da mostrare.
      * @return true se il Test contiene altri Widget, false altrimenti.
@@ -33,7 +35,7 @@ public:
      * @return
      */
     virtual QWidget* getNext(){
-        return new QLabel("Hi!");
+        return new QLabel("Sono un Widget Inutile");
     }
 
     /**
@@ -42,6 +44,17 @@ public:
     virtual void widgetShowed(){
 
     }
+
+    /**
+     * @brief setTime Imposta il tempo del test, necessario per eseguire i calcoli della
+     * @param time
+     */
+    virtual void setTime(QTime time){
+        this->time = time;
+    }
+
+protected:
+    QTime time;
 
 };
 
