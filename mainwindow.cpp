@@ -3,7 +3,7 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow),tests(new QList<Test*>()),currentTest(0)
+    ui(new Ui::MainWindow),tests(new QList<Test*>()),currentTest(0),currentItem(NULL)
 {
     ui->setupUi(this);
 
@@ -31,9 +31,23 @@ void MainWindow::showStartDialog(){
     msgBox.exec();
 
     if(msgBox.clickedButton() == avvia){
-
+        currentItem = tests->at(currentTest)->getNext();
+        ui->contentLayout->addWidget(currentItem);
+        tests->at(currentTest)->widgetShowed();
     }else{
         this->close();
     }
 
+}
+
+void MainWindow::on_bAvanti_clicked()
+{
+    if(!tests->at(currentTest)->haveNext())
+        currentTest = currentTest+1;
+
+    if(currentTest < tests->size())
+        currentItem = tests->at(currentTest)->getNext();
+        ui->contentLayout->addWidget(currentItem);
+    else
+        //showRiepilogo();
 }

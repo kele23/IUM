@@ -5,6 +5,7 @@
 #include <QList>
 #include <QMessageBox>
 #include <QTimer>
+#include <QLayoutItem>
 #include "test.h"
 #include "test1.h"
 #include "test2.h"
@@ -28,6 +29,8 @@ private:
     //Proprietà Private
     QList<Test*> *tests;
     int currentTest;
+
+    QWidget *currentItem;
 
     //Metodi Privati
 
