@@ -8,6 +8,8 @@
 #include <QLayoutItem>
 #include "test.h"
 #include "startdialog.h"
+#include "form.h"
+#include "riepilogo.h"
 
 namespace Ui {
 class MainWindow;

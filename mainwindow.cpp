@@ -7,9 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->riepilogoWidget->hide();
-
-    tests->append(new Test());
+    tests->append(new Form());
     tests->append(new Test());
 
     QTimer::singleShot(0,this,SLOT(showStartDialog()));
@@ -31,16 +29,23 @@ void MainWindow::showStartDialog(){
 
 void MainWindow::on_bAvanti_clicked()
 {
-    if(currentItem != NULL)
-        ui->contentLayout->removeWidget(currentItem);
 
-    while(currentTest < tests->size() && !tests->at(currentTest)->haveNext())
+    while(currentTest < tests->size() && !tests->at(currentTest)->hasNext())
         currentTest = currentTest+1;
 
+    QWidget* next;
     if(currentTest < tests->size()){
-        currentItem = tests->at(currentTest)->getNext();
-        ui->contentLayout->addWidget(currentItem);
+        next = tests->at(currentTest)->getNext();
     }
-    else
-        ui->riepilogoWidget->show();
+    else{
+        next = new Riepilogo();
+    }
+
+    if(currentItem == NULL){
+        currentItem = next;
+        ui->contentLayout->addWidget(currentItem);
+    }else{
+        ui->contentLayout->replaceWidget(currentItem,next);
+        currentItem = next;
+    }
 }

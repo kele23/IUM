@@ -24,7 +24,7 @@ public:
      * @brief haveNext Controlla se il Test contiene altri Widget da mostrare.
      * @return true se il Test contiene altri Widget, false altrimenti.
      */
-    virtual bool haveNext(){
+    virtual bool hasNext(){
         return false;
     }
 
