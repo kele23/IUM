@@ -47,6 +47,7 @@ void MainWindow::on_bAvanti_clicked()
     }else{
         ui->contentLayout->replaceWidget(currentItem,next);
         currentItem = next;
-        tests->at(currentTest)->widgetShowed();
+        if(currentTest < tests->size())
+            tests->at(currentTest)->widgetShowed();
     }
 }
