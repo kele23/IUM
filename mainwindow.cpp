@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "test1/test1.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -7,7 +8,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    tests->append(new Form());
+    //tests->append(new Form());
+    tests->append(new Test1(this));
 
     QTimer::singleShot(0,this,SLOT(showStartDialog()));
 }

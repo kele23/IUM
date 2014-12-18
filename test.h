@@ -38,6 +38,17 @@ public:
         return new QLabel("Sono un Widget Inutile");
     }
 
+private:
+
+    /**
+     * @brief panels Lista dei Widget appartenenti al test.
+     */
+    QList<QWidget*> *panels;
+
+    /**
+     * @brief currentPanel Il pannello correntemente mostrato nel test.
+     */
+    int currentPanel;
 
 };
 

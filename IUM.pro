@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     form.cpp \
     riepilogo.cpp \
     test1/test1.cpp \
-    test1/panel1test1.cpp
+    test1/panel1test1.cpp \
+    test1/panel2test1.cpp
 
 HEADERS  += mainwindow.h \
     test.h \
@@ -26,13 +27,15 @@ HEADERS  += mainwindow.h \
     form.h \
     riepilogo.h \
     test1/test1.h \
-    test1/panel1test1.h
+    test1/panel1test1.h \
+    test1/panel2test1.h
 
 FORMS    += mainwindow.ui \
     startdialog.ui \
     riepilogo.ui \
     form.ui \
-    test1/panel1test1.ui
+    test1/panel1test1.ui \
+    test1/panel2test1.ui
 
 RESOURCES += \
     risorse.qrc

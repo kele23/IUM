@@ -9,11 +9,16 @@ class Test1 : public Test
 {
 
 public:
-    Test1();
+    Test1(QWidget *parent);
     ~Test1();
 
-private:
+    QString getResult();
+    bool hasNext();
+    QWidget* getNext();
 
+private:
+    QList<QWidget*> *panels;
+    int currentPanel;
 };
 
 #endif // TEST1_H
