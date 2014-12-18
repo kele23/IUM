@@ -38,23 +38,6 @@ public:
         return new QLabel("Sono un Widget Inutile");
     }
 
-    /**
-     * @brief widgetShowed Metodo avviato ogni volta che un Widget di questo Test viene mostrato.
-     */
-    virtual void widgetShowed(){
-
-    }
-
-    /**
-     * @brief setTime Imposta il tempo del test, necessario per eseguire i calcoli della
-     * @param time
-     */
-    virtual void setTime(QTime time){
-        this->time = time;
-    }
-
-protected:
-    QTime time;
 
 };
 
