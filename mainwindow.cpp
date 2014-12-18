@@ -8,7 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     tests->append(new Form());
-    tests->append(new Test());
 
     QTimer::singleShot(0,this,SLOT(showStartDialog()));
 }
@@ -47,6 +46,5 @@ void MainWindow::on_bAvanti_clicked()
     }else{
         ui->contentLayout->replaceWidget(currentItem,next);
         currentItem = next;
-        tests->at(currentTest)->widgetShowed();
     }
 }
