@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Panel1Test1</class>
- <widget class="QWidget" name="Panel1Test1">
+ <class>Panel2test1</class>
+ <widget class="QWidget" name="Panel2test1">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -9,43 +9,6 @@
     <width>430</width>
     <height>330</height>
    </rect>
-  </property>
-  <property name="palette">
-   <palette>
-    <active>
-     <colorrole role="Midlight">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </active>
-    <inactive>
-     <colorrole role="Midlight">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </inactive>
-    <disabled>
-     <colorrole role="Midlight">
-      <brush brushstyle="SolidPattern">
-       <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
-       </color>
-      </brush>
-     </colorrole>
-    </disabled>
-   </palette>
   </property>
   <property name="windowTitle">
    <string>Form</string>
@@ -114,18 +77,20 @@
         </size>
        </property>
        <property name="styleSheet">
-        <string notr="true">QWidget[objectName=&quot;widget&quot;]{
-	/*background-color: rgb(170, 255, 255);*/
+        <string notr="true">/*
+QWidget[objectName=&quot;widget&quot;]{
+	/*background-color: rgb(170, 255, 255);
 }
-
+*/
 QLabel {
 	font: 87 10pt &quot;Arial Black&quot;;
 	/*font: 75 11pt &quot;Courier New&quot;;*/
-	color:rgb(255, 226, 0)
+	color:rgb(147, 0, 0)
 }
 
 QLabel[switchColor=&quot;true&quot;] {
-	color:rgb(0, 255, 204)
+	/*color:rgb(0, 255, 204)*/
+	color:rgb(50, 76, 161)
 }</string>
        </property>
        <widget class="QLabel" name="label">

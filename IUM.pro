@@ -22,6 +22,7 @@ SOURCES += main.cpp\
     test2/test2.cpp \
     test2/panel1test2.cpp \
     test2/panel2test2.cpp
+    test1/panel2test1.cpp
 
 HEADERS  += mainwindow.h \
     test.h \
@@ -33,6 +34,7 @@ HEADERS  += mainwindow.h \
     test2/test2.h \
     test2/panel1test2.h \
     test2/panel2test2.h
+    test1/panel2test1.h
 
 FORMS    += mainwindow.ui \
     startdialog.ui \
@@ -41,6 +43,7 @@ FORMS    += mainwindow.ui \
     test1/panel1test1.ui \
     test2/panel1test2.ui \
     test2/panel2test2.ui
+    test1/panel2test1.ui
 
 RESOURCES += \
     risorse.qrc
