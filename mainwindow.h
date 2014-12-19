@@ -33,7 +33,7 @@ private:
     int currentTest;
 
     QWidget *currentItem;
-
+    QTime time;
     //Metodi Privati
 
 //SLOT PRIVATI

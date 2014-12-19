@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    qrand();
     tests->append(new Test1());
     tests->append(new Test2());
 
@@ -30,6 +31,13 @@ void MainWindow::showStartDialog(){
 
 void MainWindow::on_bAvanti_clicked()
 {
+    if(currentItem != NULL){
+        int elt = time.elapsed();
+        tests->at(currentTest)->elapsedTime(elt);
+        time.restart();
+    }else{
+        time.start();
+    }
 
     while(currentTest < tests->size() && !tests->at(currentTest)->hasNext())
         currentTest = currentTest+1;
@@ -40,6 +48,9 @@ void MainWindow::on_bAvanti_clicked()
     }
     else{
         next = new Riepilogo();
+        ui->bAvanti->setText("Esci");
+        disconnect(ui->bAvanti,SIGNAL(clicked()),this,SLOT(on_bAvanti_clicked()));
+        connect(ui->bAvanti,SIGNAL(clicked()),this,SLOT(close()));
     }
 
     if(currentItem == NULL){

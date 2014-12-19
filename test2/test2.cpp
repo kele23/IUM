@@ -17,3 +17,7 @@ bool Test2::hasNext(){
 QWidget* Test2::getNext(){
     return panels->at(currentPanel++);
 }
+
+void Test2::elapsedTime(int elapsed){
+
+}

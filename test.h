@@ -38,6 +38,10 @@ public:
         return new QLabel("Sono un Widget Inutile");
     }
 
+    virtual void elapsedTime(int elapsed){
+        qDebug(qPrintable(QString::number(elapsed)));
+    }
+
 protected:
 
     /**

@@ -13,6 +13,7 @@ public:
 
     bool hasNext();
     QWidget* getNext();
+    void elapsedTime(int elapsed);
 
 };
 
