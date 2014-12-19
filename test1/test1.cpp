@@ -1,11 +1,11 @@
 #include "test1.h"
-#include "panel1test1.h"
-#include "panel2test1.h"
+#include "test1/panel1test1.h"
+#include "test1/panel2test1.h"
 
 Test1::Test1(QWidget *parent) : panels(new QList<QWidget*>()), currentPanel(0)
 {
-    //panels->append(new Panel1test1(parent));
-    panels->append(new Panel2test1(parent));
+    panels->append(new Panel1Test1());
+    panels->append(new Panel2Test1());
 }
 
 Test1::~Test1()

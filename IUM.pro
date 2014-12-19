@@ -21,7 +21,7 @@ SOURCES += main.cpp\
     test1/panel1test1.cpp \
     test2/test2.cpp \
     test2/panel1test2.cpp \
-    test2/panel2test2.cpp
+    test2/panel2test2.cpp \
     test1/panel2test1.cpp
 
 HEADERS  += mainwindow.h \
@@ -33,7 +33,7 @@ HEADERS  += mainwindow.h \
     test1/panel1test1.h \
     test2/test2.h \
     test2/panel1test2.h \
-    test2/panel2test2.h
+    test2/panel2test2.h \
     test1/panel2test1.h
 
 FORMS    += mainwindow.ui \
@@ -42,7 +42,7 @@ FORMS    += mainwindow.ui \
     form.ui \
     test1/panel1test1.ui \
     test2/panel1test2.ui \
-    test2/panel2test2.ui
+    test2/panel2test2.ui \
     test1/panel2test1.ui
 
 RESOURCES += \
