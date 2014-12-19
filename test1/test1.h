@@ -12,7 +12,6 @@ public:
     Test1();
     ~Test1();
 
-    QString getResult();
     bool hasNext();
     QWidget* getNext();
 };

@@ -6,6 +6,7 @@
 #include <QObject>
 #include <QLabel>
 #include <QTime>
+#include <QVector>
 
 /**
  * @brief Interfaccia Test, definisce i metodi generici che ogni classe Test deve implementare
@@ -15,11 +16,11 @@ class Test{
 public:
 
     /**
-     * @brief getResult Ritorna il risultato di questo Test in formato Stringa.
-     * @return Stringa Vuota se non ci sono risultati altrimenti il risultato del Test.
+     * @brief getResult Ritorna alla MainWindow il vettore di risultati ottenuti nel test.
+     * @return il vettore dei risultati.
      */
-    virtual QString getResult(){
-        return QString();
+    virtual QVector<int>* getResults(){
+        return results;
     }
 
     /**
@@ -38,8 +39,12 @@ public:
         return new QLabel("Sono un Widget Inutile");
     }
 
-    virtual void elapsedTime(int elapsed){
-        qDebug(qPrintable(QString::number(elapsed)));
+    /**
+     * @brief elapsedTime Salva il punteggio ottenuto nel pannello corrente.
+     * @param elapsed tempo trascorso, in millisecondi, corrisponde al punteggio.
+     */
+    void elapsedTime(int elapsed){
+        results->append(elapsed);
     }
 
 protected:
@@ -53,6 +58,11 @@ protected:
      * @brief currentPanel Il pannello correntemente mostrato nel test.
      */
     int currentPanel;
+
+    /**
+     * @brief results Contiene il punteggio risultato conseguito in ogni pannello del test.
+     */
+    QVector<int> *results;
 
 };
 

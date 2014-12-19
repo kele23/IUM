@@ -4,6 +4,8 @@ Test2::Test2()
 {
     panels = new QList<QWidget*>();
     currentPanel = 0;
+    results = new QVector<int>();
+
     panels->append(new Panel1Test2());
     panels->append(new Panel2Test2());
 }

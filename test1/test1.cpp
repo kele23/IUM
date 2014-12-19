@@ -6,6 +6,7 @@ Test1::Test1()
 {
     panels = new QList<QWidget*>();
     currentPanel = 0;
+    results = new QVector<int>();
 
     panels->append(new Panel1Test1());
     panels->append(new Panel2Test1());
@@ -13,10 +14,6 @@ Test1::Test1()
 
 Test1::~Test1()
 {
-}
-
-QString Test1::getResult(){
-    return QString();
 }
 
 bool Test1::hasNext(){
