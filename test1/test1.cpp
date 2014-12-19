@@ -2,8 +2,11 @@
 #include "test1/panel1test1.h"
 #include "test1/panel2test1.h"
 
-Test1::Test1(QWidget *parent) : panels(new QList<QWidget*>()), currentPanel(0)
+Test1::Test1()
 {
+    panels = new QList<QWidget*>();
+    currentPanel = 0;
+
     panels->append(new Panel1Test1());
     panels->append(new Panel2Test1());
 }

@@ -1,7 +1,9 @@
 #include "test2.h"
 
-Test2::Test2() : panels(new QList<QWidget*>()),currentPanel(0)
+Test2::Test2()
 {
+    panels = new QList<QWidget*>();
+    currentPanel = 0;
     panels->append(new Panel1Test2());
     panels->append(new Panel2Test2());
 }

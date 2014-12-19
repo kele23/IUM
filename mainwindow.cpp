@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    tests->append(new Test1(this));
+    tests->append(new Test1());
     tests->append(new Test2());
 
     QTimer::singleShot(0,this,SLOT(showStartDialog()));
