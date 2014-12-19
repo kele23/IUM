@@ -14,8 +14,6 @@ public:
     bool hasNext();
     QWidget* getNext();
 
-private:
-    int currentPanel;
 };
 
 #endif // TEST2_H

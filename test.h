@@ -38,7 +38,7 @@ public:
         return new QLabel("Sono un Widget Inutile");
     }
 
-private:
+protected:
 
     /**
      * @brief panels Lista dei Widget appartenenti al test.
