@@ -8,9 +8,20 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    qrand();
+    qsrand(time(NULL));
+
     tests->append(new Test1());
     tests->append(new Test2());
+
+    for(int i = 0; i < tests->size(); i++){
+
+        Test *test = tests->at(i);
+        int ind = qrand() % tests->size();
+        Test *testRa = tests->at(ind);
+
+        tests->replace(ind,test);
+        tests->replace(i,testRa);
+    }
 
     QTimer::singleShot(0,this,SLOT(showStartDialog()));
 }
@@ -32,11 +43,11 @@ void MainWindow::showStartDialog(){
 void MainWindow::on_bAvanti_clicked()
 {
     if(currentItem != NULL){
-        int elt = time.elapsed();
+        int elt = currentTime.elapsed();
         tests->at(currentTest)->elapsedTime(elt);
-        time.restart();
+        currentTime.restart();
     }else{
-        time.start();
+        currentTime.start();
     }
 
     while(currentTest < tests->size() && !tests->at(currentTest)->hasNext())
