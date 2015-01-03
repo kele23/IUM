@@ -84,13 +84,12 @@ QWidget[objectName=&quot;widget&quot;]{
 */
 QLabel {
 	font: 87 10pt &quot;Arial Black&quot;;
-	/*font: 75 11pt &quot;Courier New&quot;;*/
-	color:rgb(147, 0, 0)
+	/*color:rgb(147, 0, 0)*/
+	color:rgb(190, 40, 40)
 }
 
 QLabel[switchColor=&quot;true&quot;] {
-	/*color:rgb(0, 255, 204)*/
-	color:rgb(50, 76, 161)
+	color:rgb(0, 64, 255)
 }</string>
        </property>
        <widget class="QLabel" name="label">

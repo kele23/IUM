@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>IUM Start Test</string>
+   <string>IUM - Test di leggibilità dei colori - Benvenuto</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -32,7 +32,7 @@
          </sizepolicy>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;IUM Start Test&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;IUM - Test di leggibilità dei colori&lt;/span&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -61,10 +61,9 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Questo Test è stato pensato per testare i colori nelle interfacce utente; Ogni colore, che sia &lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#0000ff;&quot;&gt;Blu &lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#ff0000;&quot;&gt;Rosso&lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#ffff00;&quot;&gt;Giallo &lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#55aa00;&quot;&gt;Verde &lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#ff007f;&quot;&gt;o&lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#55aa00;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#ff00ff;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#aaaa00;&quot;&gt;l&lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#550000;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#00ffff;&quot;&gt;r&lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#aa55ff;&quot;&gt;i&lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt; color:#55aa00;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;ha delle proprietà di visibilità o di accostabilità ad altri colori. &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Ogni interfaccia è creata in modo da stabilire, in base al tempo impiegato per leggere un testo o al numero di errori commessi nel trovare una parola, quale è il colore migliore nelle UI.&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;br /&gt;Segui attentamente le istruzioni di ogni Test.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Questo esperimento è stato realizzato per valutare la leggibilità del testo nelle interfacce utente, al variare dei colori usati. &lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;Come mostrato nell'immagine a lato i test sono di due tipi: in uno bisogna individuare una data parola tra un insieme disordinato, nell'altro è richiesto il conteggio delle occorrenze di un certo termine in un dato testo.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;justify&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Ubuntu'; font-size:11pt;&quot;&gt;I test sono cronometrati e valutati automaticamente.&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
          </widget>
         </item>

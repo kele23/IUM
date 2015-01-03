@@ -125,7 +125,7 @@ QLabel {
 }
 
 QLabel[switchColor=&quot;true&quot;] {
-	color:rgb(0, 255, 204)
+	color:rgb(0, 190, 152)
 }</string>
        </property>
        <widget class="QLabel" name="label">
