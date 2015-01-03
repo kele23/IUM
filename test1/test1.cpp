@@ -34,7 +34,7 @@ QWidget* Test1::getNext(){
 }
 
 void Test1::createList(QList<QString> *words) {
-    QFile file("/test1/wordslist.txt");
+    QFile file(":/test1/wordslist.txt");
     if (!file.exists())
         qDebug("IL FILE NON ESISTE!");
     if (!file.open(QIODevice::ReadOnly))

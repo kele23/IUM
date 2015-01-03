@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>images/dialogo.jpg</file>
+        <file>test1/wordslist.txt</file>
     </qresource>
 </RCC>
