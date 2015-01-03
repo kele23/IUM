@@ -14,6 +14,9 @@ public:
 
     bool hasNext();
     QWidget* getNext();
+
+private:
+    void createList(QList<QString>*words);
 };
 
 #endif // TEST1_H
