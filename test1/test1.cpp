@@ -12,9 +12,10 @@ Test1::Test1()
     results = new QVector<int>();
     words = new QList<QString>();
 
-    panels->append(new Panel1Test1());
-    panels->append(new Panel2Test1());
     createList(words);
+    QString randomWord = getRandomWord();
+    panels->append(new Panel1Test1(0, randomWord));
+    panels->append(new Panel2Test1(0, randomWord));
 
 }
 
@@ -36,12 +37,20 @@ QWidget* Test1::getNext(){
 void Test1::createList(QList<QString> *words) {
     QFile file(":/test1/wordslist.txt");
     if (!file.exists())
-        qDebug("IL FILE NON ESISTE!");
+        qFatal("File does not exist");
     if (!file.open(QIODevice::ReadOnly))
         qFatal("Could not open file");
     QTextStream in(&file);
-    while(!file.atEnd()) {
-        qDebug("letta parola");
+    while(!in.atEnd())
         words->append(in.readLine());
+    file.close();
+    qDebug("Dimensione lista: %d", words->size());
+    for(int i = 0; i < words->size(); i++) {
+        qDebug("Parola: %s", words->at(i).toUtf8().constData());
     }
+}
+
+QString Test1::getRandomWord() {
+    int index = qrand() % words->size();
+    return words->at(index);
 }

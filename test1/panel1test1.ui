@@ -126,6 +126,11 @@ QLabel {
 
 QLabel[switchColor=&quot;true&quot;] {
 	color:rgb(0, 190, 152)
+}
+
+QPushButton {
+	font: 87 10pt &quot;Arial Black&quot;;
+	color:rgb(255, 226, 0)
 }</string>
        </property>
        <widget class="QLabel" name="label">

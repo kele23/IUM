@@ -14,6 +14,7 @@ public:
 
     bool hasNext();
     QWidget* getNext();
+    QString getRandomWord();
 
 private:
     void createList(QList<QString>*words);
