@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TESTI>
+    <PROVA>
+        <PAROLA>lui</PAROLA>
+        <OCCORRENZE>3</OCCORRENZE>
+        <TESTO>
+                Del resto non si può negare come l'affiliazione compromessa dell'attico possa provocare a lui una contigua reazione alle due camere d'aria e d'acqua contemporaneamente.
+                Lui Blandiva le tazze con inusitata pencolazione di morfeggiante diatriba.
+                Il tutto senza dimenticare come la funzione dell'ermellino sia fondamentale nella composizione di un frack, o di qualsivoglia abito da sera. Fa eccezione lo smoking, poiché lui non fuma.
+        </TESTO>
+    </PROVA>
+    <PROVA>
+        <PAROLA>le</PAROLA>
+        <OCCORRENZE>5</OCCORRENZE>
+        <TESTO>
+            Pippoppoppopperoppo Pippoppopperoppo. Urla, grida, cacca.
+            Aiuto, le forze nemiche arrivarono e morirono lugubre nel sogno di PierFrancesco della Cavalcata. Usando le specifiche tecniche di rimedio a basso costo potrai tu usare
+            molto bene? Insomma,le parliamo di una di quelle cose che vengono una volta ogni ano.
+            Esistono, peculiarità affini al buon vecchio... brodo... le farebbero meglio se qualche volta le assaggiasse.
+        </TESTO>
+    </PROVA>
+    <PROVA>
+        <PAROLA>ciao</PAROLA>
+        <OCCORRENZE>4</OCCORRENZE>
+        <TESTO>cnaicja</TESTO>
+    </PROVA>
+</TESTI>
+

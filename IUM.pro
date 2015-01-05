@@ -4,7 +4,7 @@
 -#
 -#-------------------------------------------------
 -
-QT       += core gui
+QT       += core gui xml
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -34,7 +34,8 @@ HEADERS  += mainwindow.h \
     test2/test2.h \
     test2/panel1test2.h \
     test2/panel2test2.h \
-    test1/panel2test1.h
+    test1/panel2test1.h \
+    test2/prova.h
 
 FORMS    += mainwindow.ui \
     startdialog.ui \
@@ -47,3 +48,5 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     risorse.qrc
+
+QMAKE_CXXFLAGS_WARN_OFF -= -Wunused-parameter
