@@ -46,12 +46,22 @@ p, li { white-space: pre-wrap; }
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Occorrenze Effettiv[aeo]</string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="spinBox"/>
+      <widget class="QSpinBox" name="spinBox">
+       <property name="specialValueText">
+        <string/>
+       </property>
+       <property name="suffix">
+        <string> occ</string>
+       </property>
+       <property name="prefix">
+        <string/>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

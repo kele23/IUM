@@ -20,9 +20,14 @@
         </TESTO>
     </PROVA>
     <PROVA>
-        <PAROLA>ciao</PAROLA>
+        <PAROLA>in</PAROLA>
         <OCCORRENZE>4</OCCORRENZE>
-        <TESTO>cnaicja</TESTO>
+        <TESTO>
+            Volendo parlare della cosiddetta fonte di svago per giovani gaudenti in particolare gli anziani, si può fare riferimento all'antica pratica di suonare uno strumento
+            in luoghi pubblici. Innanzitutto bisogna sottolineare che avendo in mano una molecola di sodio essa inevitabilmente si sentirà in dovere di chiedere alla vicina bollicina
+            di anidride se è sola in casa, quindi lasciamo perdere il sodio e cerchiamo un alto elemento, il ferro ad esempio.
+            I possessori di ferro possono ritenersi dei fortunati imprenditori umidi poiché è in casa loro che i koala fanno il nido.
+        </TESTO>
     </PROVA>
 </TESTI>
 
