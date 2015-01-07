@@ -8,7 +8,6 @@
 #include <QLayoutItem>
 #include "test.h"
 #include "startdialog.h"
-#include "form.h"
 #include "riepilogo.h"
 #include "test2/test2.h"
 

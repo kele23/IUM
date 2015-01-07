@@ -11,9 +11,15 @@
 /**
  * @brief Interfaccia Test, definisce i metodi generici che ogni classe Test deve implementare
  */
-class Test{
+class Test : public QObject{
+
+    Q_OBJECT
 
 public:
+
+    Test(QObject* parent = 0) : QObject(parent){
+
+    }
 
     /**
      * @brief getResult Ritorna alla MainWindow il vettore di risultati ottenuti nel test.
@@ -43,9 +49,20 @@ public:
      * @brief elapsedTime Salva il punteggio ottenuto nel pannello corrente.
      * @param elapsed tempo trascorso, in millisecondi, corrisponde al punteggio.
      */
-    void elapsedTime(int elapsed){
+    virtual void elapsedTime(int elapsed){
         results->append(elapsed);
     }
+
+    /**
+     * @brief needNextButton
+     * @return
+     */
+    virtual bool needNextButton(){
+        return true;
+    }
+
+signals:
+    void goToNextPanel();
 
 protected:
 
@@ -68,6 +85,11 @@ protected:
      * @brief words Contiene l'elenco di parole presenti nel pannello.
      */
     QList<QString> *words;
+
+protected slots:
+    void goNextPanel(){
+        emit goToNextPanel();
+    }
 
 };
 

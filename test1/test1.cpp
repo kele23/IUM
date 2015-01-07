@@ -14,8 +14,12 @@ Test1::Test1()
 
     createList(words);
     QString randomWord = getRandomWord();
-    panels->append(new Panel1Test1(0, randomWord));
-    panels->append(new Panel2Test1(0, randomWord));
+    Panel1Test1 *p1 = new Panel1Test1(0, randomWord);
+    connect(p1,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
+    panels->append(p1);
+    Panel2Test1 *p2 = new Panel2Test1(0, randomWord);
+    connect(p2,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
+    panels->append(p2);
 
 }
 
@@ -53,4 +57,8 @@ void Test1::createList(QList<QString> *words) {
 QString Test1::getRandomWord() {
     int index = qrand() % words->size();
     return words->at(index);
+}
+
+bool Test1::needNextButton(){
+    return false;
 }

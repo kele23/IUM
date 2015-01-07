@@ -15,6 +15,12 @@ public:
     explicit Panel2Test1(QWidget *parent = 0, QString targetWord = 0);
     ~Panel2Test1();
 
+signals:
+    void goToNextPanel();
+
+private slots:
+    void wordClicked();
+
 private:
     Ui::Panel2Test1 *ui;
     QString targetWord;

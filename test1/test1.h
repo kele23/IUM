@@ -1,6 +1,7 @@
 #ifndef TEST1_H
 #define TEST1_H
 
+#include <QObject>
 #include <QWidget>
 #include "test.h"
 
@@ -15,6 +16,8 @@ public:
     bool hasNext();
     QWidget* getNext();
     QString getRandomWord();
+
+    bool needNextButton();
 
 private:
     void createList(QList<QString>*words);

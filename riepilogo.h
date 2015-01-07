@@ -12,7 +12,7 @@ class Riepilogo : public QWidget
     Q_OBJECT
 
 public:
-    explicit Riepilogo(QWidget *parent = 0);
+    explicit Riepilogo(QWidget *parent = 0,QString res = "");
     ~Riepilogo();
 
 private:

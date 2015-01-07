@@ -11,7 +11,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     qsrand(time(NULL));
 
-    tests->append(new Test1());
+    Test1 *test1 = new Test1();
+    connect(test1,SIGNAL(goToNextPanel()),this,SLOT(on_bAvanti_clicked()));
+    tests->append(test1);
     tests->append(new Test2());
 
     for(int i = 0; i < tests->size(); i++){
@@ -57,9 +59,23 @@ void MainWindow::on_bAvanti_clicked()
     QWidget* next;
     if(currentTest < tests->size()){
         next = tests->at(currentTest)->getNext();
+        if(tests->at(currentTest)->needNextButton()){
+            ui->bAvanti->show();
+        }else{
+            ui->bAvanti->hide();
+        }
     }
     else{
-        next = new Riepilogo();
+
+        QString res = "";
+        for(int i = 0;i < tests->size(); i++){
+            QVector<int> * results = tests->at(i)->getResults();
+            for(int j = 0; j < results->size(); j++){
+                res += "Test "+QString::number(i)+": "+QString::number(results->at(j))+"\n";
+            }
+        }
+        next = new Riepilogo(0,res);
+
         ui->bAvanti->setText("Esci");
         disconnect(ui->bAvanti,SIGNAL(clicked()),this,SLOT(on_bAvanti_clicked()));
         connect(ui->bAvanti,SIGNAL(clicked()),this,SLOT(close()));

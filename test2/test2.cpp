@@ -23,7 +23,8 @@ QWidget* Test2::getNext(){
 }
 
 void Test2::elapsedTime(int elapsed){
-
+    //int err = abs(prove.at(currentPanel-1).occorrenze - panels->at(currentPanel-1)->getOccorrenze());
+    //results->append(elapsed + err*500);
 }
 
 void Test2::caricaProve(){
