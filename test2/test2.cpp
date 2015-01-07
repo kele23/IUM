@@ -6,10 +6,10 @@ Test2::Test2()
     currentPanel = 0;
     results = new QVector<int>();
 
-    caricaProve();
+    loadExams();
 
-    panels->append(new Panel1Test2(0,prove.at(0)));
-    panels->append(new Panel2Test2(0,prove.at(1)));
+    panels->append(new PanelTest2(0,exams.at(0)));
+    panels->append(new PanelTest2(0,exams.at(1)));
 }
 
 bool Test2::hasNext(){
@@ -23,13 +23,13 @@ QWidget* Test2::getNext(){
 }
 
 void Test2::elapsedTime(int elapsed){
-    //int err = abs(prove.at(currentPanel-1).occorrenze - panels->at(currentPanel-1)->getOccorrenze());
-    //results->append(elapsed + err*500);
+    int err = abs(exams.at(currentPanel-1).occurrences - ((PanelTest2*)panels->at(currentPanel-1))->getInsOccurrences());
+    results->append(elapsed + err*500);
 }
 
-void Test2::caricaProve(){
+void Test2::loadExams(){
 
-    QFile file(":/test2/testi.txt");
+    QFile file(":/test2/exams.txt");
     if (!file.exists())
         qFatal("File does not exist");
     if (!file.open(QIODevice::ReadOnly))
@@ -47,6 +47,6 @@ void Test2::caricaProve(){
     if (!ok)
         qFatal("Parsing failed.");
 
-    prove = handler->getProve();
+    exams = handler->getExams();
 
 }

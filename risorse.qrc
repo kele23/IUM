@@ -2,6 +2,6 @@
     <qresource prefix="/">
         <file>images/dialogo.jpg</file>
         <file>test1/wordslist.txt</file>
-        <file>test2/testi.txt</file>
+        <file>test2/exams.txt</file>
     </qresource>
 </RCC>

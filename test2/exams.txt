@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXAMS>
+    <EXAM>
+        <WORD>lui</WORD>
+        <OCCURRENCES>3</OCCURRENCES>
+        <TEXT>
+                Del resto non si può negare come l'affiliazione compromessa dell'attico possa provocare a lui una contigua reazione alle due camere d'aria e d'acqua contemporaneamente.
+                Lui Blandiva le tazze con inusitata pencolazione di morfeggiante diatriba.
+                Il tutto senza dimenticare come la funzione dell'ermellino sia fondamentale nella composizione di un frack, o di qualsivoglia abito da sera. Fa eccezione lo smoking, poiché lui non fuma.
+        </TEXT>
+        <BACKGROUNDCOLOR>#000042</BACKGROUNDCOLOR>
+        <TEXTCOLOR>#ffffff</TEXTCOLOR>
+    </EXAM>
+    <EXAM>
+        <WORD>le</WORD>
+        <OCCURRENCES>5</OCCURRENCES>
+        <TEXT>
+            Pippoppoppopperoppo Pippoppopperoppo. Urla, grida, cacca.
+            Aiuto, le forze nemiche arrivarono e morirono lugubre nel sogno di PierFrancesco della Cavalcata. Usando le specifiche tecniche di rimedio a basso costo potrai tu usare
+            molto bene? Insomma,le parliamo di una di quelle cose che vengono una volta ogni ano.
+            Esistono, peculiarità affini al buon vecchio... brodo... le farebbero meglio se qualche volta le assaggiasse.
+        </TEXT>
+        <BACKGROUNDCOLOR>#ffffff</BACKGROUNDCOLOR>
+        <TEXTCOLOR>#d4d400</TEXTCOLOR>
+    </EXAM>
+</EXAMS>
+

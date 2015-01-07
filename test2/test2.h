@@ -7,9 +7,9 @@
 #include <QXmlStreamReader>
 #include <QXmlSimpleReader>
 #include <QXmlInputSource>
-#include "test2/panel1test2.h"
-#include "test2/panel2test2.h"
-#include "test2/prova.h"
+#include "test2/paneltest2.h"
+#include "test2/paneltest2.h"
+#include "test2/exam.h"
 
 class Test2 : public Test
 {
@@ -20,11 +20,11 @@ public:
     QWidget* getNext();
     void elapsedTime(int elapsed);
 
-    void caricaProve();
+    void loadExams();
 
 private:
 
-    QList<Prova> prove;
+    QList<Exam> exams;
 
     class Handler : public QXmlDefaultHandler{
 
@@ -40,18 +40,24 @@ private:
         }
 
         bool endElement(const QString & namespaceURI, const QString & localName, const QString & qName){
-            if(localName.compare("PAROLA") == 0){
-                tempProva.parola = tempRead;
+            if(localName.compare("WORD") == 0){
+                tempExam.word = tempRead;
             }
-            else if(localName.compare("OCCORRENZE") == 0){
-                tempProva.occorrenze = tempRead.toInt();
+            else if(localName.compare("OCCURRENCES") == 0){
+                tempExam.occurrences = tempRead.toInt();
             }
-            else if(localName.compare("TESTO") == 0){
-                tempProva.testo = tempRead.simplified();
+            else if(localName.compare("TEXT") == 0){
+                tempExam.text = tempRead.simplified();
             }
-            else if(localName.compare("PROVA") == 0){
-                prove.append(tempProva);
-                //qWarning() << "Occorrenze: " << tempProva.occorrenze << " Parola: " << tempProva.parola << " Testo: " << tempProva.testo ;
+            else if(localName.compare("BACKGROUNDCOLOR") == 0){
+                tempExam.backgroundColor = tempRead.simplified();
+            }
+            else if(localName.compare("TEXTCOLOR") == 0){
+                tempExam.textColor = tempRead.simplified();
+            }
+            else if(localName.compare("EXAM") == 0){
+                exams.append(tempExam);
+                //qWarning() << "Occorrenze: " << tempExam.occorrenze << " Parola: " << tempExam.parola << " Testo: " << tempExam.testo ;
             }
             return true;
         }
@@ -61,14 +67,14 @@ private:
             return true;
         }
 
-        QList<Prova> getProve(){
-            return prove;
+        QList<Exam> getExams(){
+            return exams;
         }
 
     private:
-        QList<Prova> prove;
+        QList<Exam> exams;
         QString tempRead;
-        Prova tempProva;
+        Exam tempExam;
     };
 };
 
