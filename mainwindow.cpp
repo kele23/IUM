@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Test1 *test1 = new Test1();
     connect(test1,SIGNAL(goToNextPanel()),this,SLOT(on_bAvanti_clicked()));
     tests->append(test1);
+
     tests->append(new Test2());
 
     for(int i = 0; i < tests->size(); i++){
