@@ -7,7 +7,7 @@ PanelTest2::PanelTest2(QWidget *parent,Exam exam) :
 {
     ui->setupUi(this);
     ui->textBrowser->setText("<BODY bgcolor=\""+exam.backgroundColor+"\"><P style=\"color:"+exam.textColor+";\">"+exam.text+"</P></BODY>");
-    ui->label->setText(exam.word);
+    ui->lWordSearch->setText(exam.word);
 }
 
 PanelTest2::~PanelTest2()
