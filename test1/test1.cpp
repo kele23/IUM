@@ -14,10 +14,10 @@ Test1::Test1()
 
     createList(words);
     QString randomWord = getRandomWord();
-    Panel1Test1 *p1 = new Panel1Test1(0, randomWord);
+    Panel1Test1 *p1 = new Panel1Test1(0, randomWord, words);
     connect(p1,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
     panels->append(p1);
-    Panel2Test1 *p2 = new Panel2Test1(0, randomWord);
+    Panel2Test1 *p2 = new Panel2Test1(0, randomWord, words);
     connect(p2,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
     panels->append(p2);
 
@@ -48,6 +48,15 @@ void Test1::createList(QList<QString> *words) {
     while(!in.atEnd())
         words->append(in.readLine());
     file.close();
+    for(int i = 0; i < words->size(); i++){
+
+        QString wd = words->at(i);
+        int ind = qrand() % words->size();
+        QString randomWd = words->at(ind);
+
+        words->replace(ind,wd);
+        words->replace(i,randomWd);
+    }
     qDebug("Dimensione lista: %d", words->size());
     for(int i = 0; i < words->size(); i++) {
         qDebug("Parola: %s", words->at(i).toUtf8().constData());
