@@ -15,9 +15,9 @@
         <WORD>le</WORD>
         <OCCURRENCES>5</OCCURRENCES>
         <TEXT>
-            Pippoppoppopperoppo Pippoppopperoppo. Urla, grida, cacca.
+            Pippoppoppopperoppo Pippoppopperoppo. Urla, grida, mangia.
             Aiuto, le forze nemiche arrivarono e morirono lugubre nel sogno di PierFrancesco della Cavalcata. Usando le specifiche tecniche di rimedio a basso costo potrai tu usare
-            molto bene? Insomma,le parliamo di una di quelle cose che vengono una volta ogni ano.
+            molto bene? Insomma,le parliamo di una di quelle cose che vengono una volta ogni secolo.
             Esistono, peculiarità affini al buon vecchio... brodo... le farebbero meglio se qualche volta le assaggiasse.
         </TEXT>
         <BACKGROUNDCOLOR>#ffffff</BACKGROUNDCOLOR>
