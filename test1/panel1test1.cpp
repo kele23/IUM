@@ -10,6 +10,7 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
     ui->setupUi(this);
 
     QList<QPushButton *> buttons = ui->buttonGroup->buttons();
+
     int limit;
     if(buttons.size() < words->size())
         limit = buttons.size();
