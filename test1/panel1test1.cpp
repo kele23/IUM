@@ -20,8 +20,8 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
     for(int i = 0; i < limit; i++ )
         buttons.at(i)->setText(words->at(i));
 
-    foreach(QAbstractButton b, buttons) {
-        QPushButton button = (QPushButton) b;
+    foreach(QAbstractButton *b, buttons) {
+        QPushButton* button = (QPushButton*) b;
         connect(button,SIGNAL(clicked()),this,SLOT(wordClicked()));
     }
     /*

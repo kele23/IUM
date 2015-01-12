@@ -9,7 +9,7 @@ Panel2Test1::Panel2Test1(QWidget *parent, QString targetWord, QList<QString> *wo
     this->targetWord = targetWord;
     ui->setupUi(this);
 
-    QList<QAbstractButton *> buttons = ui->buttonGroup->buttons();
+    /*QList<QAbstractButton *> buttons = ui->buttonGroup->buttons();
 
     int limit;
     if(buttons.size() < words->size())
@@ -23,7 +23,7 @@ Panel2Test1::Panel2Test1(QWidget *parent, QString targetWord, QList<QString> *wo
     foreach(QAbstractButton b, buttons) {
         QPushButton button = (QPushButton) b;
         connect(button,SIGNAL(clicked()),this,SLOT(wordClicked()));
-    }
+    }*/
 
     connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(wordClicked()));
 }
