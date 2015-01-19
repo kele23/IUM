@@ -16,6 +16,7 @@ class Panel1Test1 : public QWidget
 public:
     explicit Panel1Test1(QWidget *parent = 0, QString targetWord = 0, QList<QString> *words = 0);
     ~Panel1Test1();
+    void changeColors(QString stylesh);
 
 signals:
     void goToNextPanel();

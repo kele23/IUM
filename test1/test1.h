@@ -20,7 +20,9 @@ public:
     bool needNextButton();
 
 private:
-    void createList(QList<QString>*words);
+    QList<QString> *words;
+    void createList(QList<QString> *words);
+    void randomizeWords(QList<QString> *words);
 };
 
 #endif // TEST1_H

@@ -19,16 +19,11 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
 
     for(int i = 0; i < limit; i++ )
         buttons.at(i)->setText(words->at(i));
-
+    ui->label_2->setText(targetWord);
     foreach(QAbstractButton *b, buttons) {
         QPushButton* button = (QPushButton*) b;
         connect(button,SIGNAL(clicked()),this,SLOT(wordClicked()));
     }
-    /*
-    connect(ui->pushButton,SIGNAL(clicked()),this,SLOT(wordClicked()));
-    connect(ui->pushButton_2,SIGNAL(clicked()),this,SLOT(wordClicked()));
-    connect(ui->pushButton_3,SIGNAL(clicked()),this,SLOT(wordClicked()));
-    */
 }
 
 Panel1Test1::~Panel1Test1()
@@ -39,7 +34,12 @@ Panel1Test1::~Panel1Test1()
 void Panel1Test1::wordClicked()
 {
     QPushButton* b = (QPushButton*) this->sender();
-    if(b->text().compare("ciao") == 0){
+    if(b->text().compare(targetWord) == 0){
         emit goToNextPanel();
     }
+}
+
+void Panel1Test1::changeColors(QString stylesh)
+{
+    ui->widget->setStyleSheet(stylesh);
 }

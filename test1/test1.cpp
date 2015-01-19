@@ -2,7 +2,6 @@
 #include <QTextStream>
 #include "test1.h"
 #include "test1/panel1test1.h"
-#include "test1/panel2test1.h"
 
 
 Test1::Test1()
@@ -17,7 +16,9 @@ Test1::Test1()
     Panel1Test1 *p1 = new Panel1Test1(0, randomWord, words);
     connect(p1,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
     panels->append(p1);
-    Panel2Test1 *p2 = new Panel2Test1(0, randomWord, words);
+    randomizeWords(words);
+    Panel1Test1 *p2 = new Panel1Test1(0, getRandomWord(), words);
+    p2->changeColors("QPushButton { font: 87 10pt \"Arial Black\"; color:rgb(190, 40, 40)} QPushButton[switchColor=\"true\"] {color:rgb(0, 64, 255)}");
     connect(p2,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
     panels->append(p2);
 
@@ -48,15 +49,9 @@ void Test1::createList(QList<QString> *words) {
     while(!in.atEnd())
         words->append(in.readLine());
     file.close();
-    for(int i = 0; i < words->size(); i++){
 
-        QString wd = words->at(i);
-        int ind = qrand() % words->size();
-        QString randomWd = words->at(ind);
+    randomizeWords(words);
 
-        words->replace(ind,wd);
-        words->replace(i,randomWd);
-    }
     qDebug("Dimensione lista: %d", words->size());
     for(int i = 0; i < words->size(); i++) {
         qDebug("Parola: %s", words->at(i).toUtf8().constData());
@@ -66,6 +61,18 @@ void Test1::createList(QList<QString> *words) {
 QString Test1::getRandomWord() {
     int index = qrand() % words->size();
     return words->at(index);
+}
+
+void Test1::randomizeWords(QList<QString> *words){
+    for(int i = 0; i < words->size(); i++){
+
+        QString wd = words->at(i);
+        int ind = qrand() % words->size();
+        QString randomWd = words->at(ind);
+
+        words->replace(ind,wd);
+        words->replace(i,randomWd);
+    }
 }
 
 bool Test1::needNextButton(){

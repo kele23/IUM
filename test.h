@@ -81,10 +81,6 @@ protected:
      */
     QVector<int> *results;
 
-    /**
-     * @brief words Contiene l'elenco di parole presenti nel pannello.
-     */
-    QList<QString> *words;
 
 protected slots:
     void goNextPanel(){
