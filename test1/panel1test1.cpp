@@ -7,10 +7,7 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
     ui(new Ui::Panel1Test1)
 {
     this->targetWord = targetWord;
-    //const QString stylesh = "QPushButton { font: 87 10pt \"Arial Black\"\; color:rgb(190, 40, 40)} QPushButton[switchColor=\"true\"] {color:rgb(0, 64, 255)}";
 
-    //check current stylesheet
-    //qDebug("%s", ui->widget->styleSheet().toUtf8().constData());
     ui->setupUi(this);
     QList<QAbstractButton *> buttons = ui->buttonGroup->buttons();
 
@@ -22,7 +19,7 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
 
     for(int i = 0; i < limit; i++ )
         buttons.at(i)->setText(words->at(i));
-    ui->label_2->setText(targetWord);
+    ui->label_2->setText("<html><head/><body><p><span style=\"font-size:9pt; font-weight:600;\">" + targetWord + "</span></p></body></html>");
     foreach(QAbstractButton *b, buttons) {
         QPushButton* button = (QPushButton*) b;
         connect(button,SIGNAL(clicked()),this,SLOT(wordClicked()));
