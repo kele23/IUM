@@ -18,7 +18,7 @@ Test1::Test1()
     panels->append(p1);
     randomizeWords(words);
     Panel1Test1 *p2 = new Panel1Test1(0, getRandomWord(), words);
-    p2->changeColors("QPushButton { font: 87 10pt \"Arial Black\"; color:rgb(190, 40, 40)} QPushButton[switchColor=\"true\"] {color:rgb(0, 64, 255)}");
+    //p2->changeColors("QPushButton { font: 87 10pt \"Arial Black\"; color:rgb(190, 40, 40)} QPushButton[switchColor=\"true\"] {color:rgb(0, 64, 255)}");
     connect(p2,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
     panels->append(p2);
 

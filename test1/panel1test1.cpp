@@ -7,8 +7,11 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
     ui(new Ui::Panel1Test1)
 {
     this->targetWord = targetWord;
-    ui->setupUi(this);
+    //const QString stylesh = "QPushButton { font: 87 10pt \"Arial Black\"\; color:rgb(190, 40, 40)} QPushButton[switchColor=\"true\"] {color:rgb(0, 64, 255)}";
 
+    //check current stylesheet
+    //qDebug("%s", ui->widget->styleSheet().toUtf8().constData());
+    ui->setupUi(this);
     QList<QAbstractButton *> buttons = ui->buttonGroup->buttons();
 
     int limit;
