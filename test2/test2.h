@@ -20,16 +20,28 @@ public:
     QWidget* getNext();
     void elapsedTime(int elapsed);
 
+    /**
+     * @brief Carica i testi salvati nel file delle risorse test2/exams.txt
+     */
     void loadExams();
 
 private:
 
     QList<Exam> exams;
 
+    /**
+     * @brief La classe Handler gestisce la lettura del file XML, rispondendo a eventi quali la fine di un elemento XML o
+     * la lettura del testo.
+     */
     class Handler : public QXmlDefaultHandler{
 
     public:
 
+        /**
+         * @brief Metodo avviato automaticamente se l'xml reader trova un errore fatale durante il parsing del file xml
+         * @param exception, parametro passato automaticamente dal xml reader per descrivere l'errore trovato
+         * @return false sempre
+         */
         bool fatalError (const QXmlParseException & exception)
         {
             qWarning() << "Fatal error on line" << exception.lineNumber()
@@ -39,6 +51,14 @@ private:
             return false;
         }
 
+        /**
+         * @brief Metodo avviato automaticamente, durante il parsing del file xml, ogni volta che viene trovata la fine di un tag.
+         * Se il tag è uno di quelli validi, allora il sistema agisce di conseguenza aggiungendo un esame o modificando il contenuto di un esame.
+         * @param namespaceURI
+         * @param localName
+         * @param qName
+         * @return
+         */
         bool endElement(const QString & namespaceURI, const QString & localName, const QString & qName){
             if(localName.compare("WORD") == 0){
                 tempExam.word = tempRead;
@@ -57,16 +77,24 @@ private:
             }
             else if(localName.compare("EXAM") == 0){
                 exams.append(tempExam);
-                //qWarning() << "Occorrenze: " << tempExam.occorrenze << " Parola: " << tempExam.parola << " Testo: " << tempExam.testo ;
             }
             return true;
         }
 
+        /**
+         * @brief Metodo avviato automaticamente, durante il parsing del file xml, ogni volta che viene letta una stringa all'interno di campi o CDATA
+         * @param La stringa letta
+         * @return
+         */
         bool characters(const QString &ch){
             tempRead = ch;
             return true;
         }
 
+        /**
+         * @brief Ritorna la lista di esami che è stata letta dall'xml
+         * @return Lista di Esami
+         */
         QList<Exam> getExams(){
             return exams;
         }

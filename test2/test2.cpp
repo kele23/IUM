@@ -8,8 +8,9 @@ Test2::Test2()
 
     loadExams();
 
-    panels->append(new PanelTest2(0,exams.at(0)));
-    panels->append(new PanelTest2(0,exams.at(1)));
+    for(int i = 0; i < exams.size(); i++){
+        panels->append(new PanelTest2(0,exams.at(i)));
+    }
 }
 
 bool Test2::hasNext(){
