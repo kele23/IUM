@@ -19,8 +19,6 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
     for(int i = 0; i < limit; i++ )
         buttons.at(i)->setText(words->at(i));
 
-    changeColors("QPushButton { font: 87 10pt \"Arial Black\"; color:rgb(190, 40, 40)} QPushButton[switchColor=\"true\"] {color:rgb(0, 64, 255)}");
-    ui->widget->repaint();
     ui->label_2->setText("<html><head/><body><p><span style=\"font-size:9pt; font-weight:600;\">" + targetWord + "</span></p></body></html>");
     foreach(QAbstractButton *b, buttons) {
         QPushButton* button = (QPushButton*) b;
