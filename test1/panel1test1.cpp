@@ -1,7 +1,7 @@
 #include "panel1test1.h"
 #include "ui_panel1test1.h"
 
-Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *words) :
+Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *words,bool readable) :
     targetWord(""),
     QWidget(parent),
     ui(new Ui::Panel1Test1)
@@ -22,6 +22,7 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
     ui->label_2->setText("<html><head/><body><p><span style=\"font-size:9pt; font-weight:600;\">" + targetWord + "</span></p></body></html>");
     foreach(QAbstractButton *b, buttons) {
         QPushButton* button = (QPushButton*) b;
+        b->setProperty("readable",readable);
         connect(button,SIGNAL(clicked()),this,SLOT(wordClicked()));
     }
 }
@@ -37,9 +38,4 @@ void Panel1Test1::wordClicked()
     if(b->text().compare(targetWord) == 0){
         emit goToNextPanel();
     }
-}
-
-void Panel1Test1::changeColors(QString stylesh)
-{
-    ui->widget->setStyleSheet(stylesh);
 }

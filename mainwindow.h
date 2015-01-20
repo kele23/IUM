@@ -10,6 +10,7 @@
 #include "startdialog.h"
 #include "riepilogo.h"
 #include "test2/test2.h"
+#include "result.h"
 
 namespace Ui {
 class MainWindow;

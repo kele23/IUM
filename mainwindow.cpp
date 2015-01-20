@@ -68,13 +68,17 @@ void MainWindow::on_bAvanti_clicked()
     }
     else{
 
-        QString res = "";
-        for(int i = 0;i < tests->size(); i++){
+        QList<Result> *res = new QList<Result>();
+        for(int i = 0; i < tests->size(); i++){
             QVector<int> * results = tests->at(i)->getResults();
             for(int j = 0; j < results->size(); j++){
-                res += "Test "+QString::number(i)+": "+QString::number(results->at(j))+"\n";
+                Result r;
+                r.name = tests->at(i)->getTestName()+" P"+QString::number(j);
+                r.value = results->at(j);
+                res->append(r);
             }
         }
+
         next = new Riepilogo(0,res);
 
         ui->bAvanti->setText("Esci");

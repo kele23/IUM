@@ -51,3 +51,7 @@ void Test2::loadExams(){
     exams = handler->getExams();
 
 }
+
+QString Test2::getTestName(){
+    return "Lettura";
+}

@@ -136,6 +136,14 @@ QPushButton {
 
 QPushButton[switchColor=&quot;true&quot;] {
 	color:rgb(0, 190, 152)
+}
+
+QPushButton[readable = &quot;true&quot;]{
+	color:rgb(190, 40, 40);
+}
+
+QPushButton[readable = &quot;true&quot;][switchColor = &quot;true&quot;]{
+	color:rgb(0, 64, 255);
 }</string>
        </property>
        <widget class="QPushButton" name="pushButton">
@@ -155,6 +163,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         </property>
         <property name="switchColor" stdset="0">
          <bool>true</bool>
+        </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
@@ -178,6 +189,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>true</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -198,6 +212,9 @@ QPushButton[switchColor=&quot;true&quot;] {
          <bool>true</bool>
         </property>
         <property name="switchColor" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="readable" stdset="0">
          <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
@@ -222,6 +239,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>false</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -244,6 +264,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>true</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -264,6 +287,9 @@ QPushButton[switchColor=&quot;true&quot;] {
          <bool>true</bool>
         </property>
         <property name="switchColor" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="readable" stdset="0">
          <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
@@ -288,6 +314,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>false</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -308,6 +337,9 @@ QPushButton[switchColor=&quot;true&quot;] {
          <bool>true</bool>
         </property>
         <property name="switchColor" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="readable" stdset="0">
          <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
@@ -332,6 +364,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>true</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -352,6 +387,9 @@ QPushButton[switchColor=&quot;true&quot;] {
          <bool>true</bool>
         </property>
         <property name="switchColor" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="readable" stdset="0">
          <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
@@ -376,6 +414,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>false</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -398,6 +439,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>true</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -418,6 +462,9 @@ QPushButton[switchColor=&quot;true&quot;] {
          <bool>true</bool>
         </property>
         <property name="switchColor" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="readable" stdset="0">
          <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
@@ -442,6 +489,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>false</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -463,6 +513,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         </property>
         <property name="switchColor" stdset="0">
          <bool>true</bool>
+        </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
@@ -486,6 +539,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>true</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -506,6 +562,9 @@ QPushButton[switchColor=&quot;true&quot;] {
          <bool>true</bool>
         </property>
         <property name="switchColor" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="readable" stdset="0">
          <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
@@ -530,6 +589,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>false</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -550,6 +612,9 @@ QPushButton[switchColor=&quot;true&quot;] {
          <bool>true</bool>
         </property>
         <property name="switchColor" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="readable" stdset="0">
          <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
@@ -574,6 +639,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>false</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -594,6 +662,9 @@ QPushButton[switchColor=&quot;true&quot;] {
          <bool>true</bool>
         </property>
         <property name="switchColor" stdset="0">
+         <bool>false</bool>
+        </property>
+        <property name="readable" stdset="0">
          <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
@@ -618,6 +689,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>true</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
@@ -639,6 +713,9 @@ QPushButton[switchColor=&quot;true&quot;] {
         </property>
         <property name="switchColor" stdset="0">
          <bool>true</bool>
+        </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
         </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
@@ -662,11 +739,14 @@ QPushButton[switchColor=&quot;true&quot;] {
         <property name="switchColor" stdset="0">
          <bool>false</bool>
         </property>
+        <property name="readable" stdset="0">
+         <bool>false</bool>
+        </property>
         <attribute name="buttonGroup">
          <string notr="true">buttonGroup</string>
         </attribute>
        </widget>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>200</x>

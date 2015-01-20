@@ -29,7 +29,8 @@ HEADERS  += mainwindow.h \
     test2/test2.h \
     test2/paneltest2.h \
     test2/exam.h \
-    test1/panel1test1.h
+    test1/panel1test1.h \
+    result.h
 
 FORMS    += mainwindow.ui \
     startdialog.ui \

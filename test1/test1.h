@@ -19,6 +19,8 @@ public:
 
     bool needNextButton();
 
+    QString getTestName();
+
 private:
     QList<QString> *words;
     void createList(QList<QString> *words);

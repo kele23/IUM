@@ -19,6 +19,7 @@ public:
     bool hasNext();
     QWidget* getNext();
     void elapsedTime(int elapsed);
+    QString getTestName();
 
     /**
      * @brief Carica i testi salvati nel file delle risorse test2/exams.txt
@@ -36,6 +37,10 @@ private:
     class Handler : public QXmlDefaultHandler{
 
     public:
+
+        Handler() : QXmlDefaultHandler(){
+
+        }
 
         /**
          * @brief Metodo avviato automaticamente se l'xml reader trova un errore fatale durante il parsing del file xml

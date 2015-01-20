@@ -61,6 +61,10 @@ public:
         return true;
     }
 
+    virtual QString getTestName(){
+        return "Test";
+    }
+
 signals:
     void goToNextPanel();
 

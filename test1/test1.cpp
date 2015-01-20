@@ -17,9 +17,7 @@ Test1::Test1()
     connect(p1,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
     panels->append(p1);
     randomizeWords(words);
-    Panel1Test1 *p2 = new Panel1Test1(0, getRandomWord(), words);
-    p2->changeColors("QPushButton { font: 87 10pt \"Arial Black\"; color:rgb(190, 40, 40)} QPushButton[switchColor=\"true\"] {color:rgb(0, 64, 255)}");
-    p2->repaint();
+    Panel1Test1 *p2 = new Panel1Test1(0, getRandomWord(), words, true);
     connect(p2,SIGNAL(goToNextPanel()),this,SLOT(goNextPanel()));
     panels->append(p2);
 
@@ -53,10 +51,10 @@ void Test1::createList(QList<QString> *words) {
 
     randomizeWords(words);
 
-    qDebug("Dimensione lista: %d", words->size());
+    /*qDebug("Dimensione lista: %d", words->size());
     for(int i = 0; i < words->size(); i++) {
         qDebug("Parola: %s", words->at(i).toUtf8().constData());
-    }
+    }*/
 }
 
 QString Test1::getRandomWord() {
@@ -78,4 +76,8 @@ void Test1::randomizeWords(QList<QString> *words){
 
 bool Test1::needNextButton(){
     return false;
+}
+
+QString Test1::getTestName(){
+    return "Parole";
 }
