@@ -63,11 +63,12 @@ QString Test1::getRandomWord() {
 }
 
 void Test1::randomizeWords(QList<QString> *words){
+    QString wd;
+    QString randomWd;
     for(int i = 0; i < words->size(); i++){
-
-        QString wd = words->at(i);
+        wd = words->at(i);
         int ind = qrand() % words->size();
-        QString randomWd = words->at(ind);
+        randomWd = words->at(ind);
 
         words->replace(ind,wd);
         words->replace(i,randomWd);

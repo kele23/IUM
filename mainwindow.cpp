@@ -17,11 +17,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     tests->append(new Test2());
 
+    Test *test;
+    Test *testRa;
     for(int i = 0; i < tests->size(); i++){
-
-        Test *test = tests->at(i);
+        test = tests->at(i);
         int ind = qrand() % tests->size();
-        Test *testRa = tests->at(ind);
+        testRa = tests->at(ind);
 
         tests->replace(ind,test);
         tests->replace(i,testRa);
@@ -69,10 +70,11 @@ void MainWindow::on_bAvanti_clicked()
     else{
 
         QList<Result> *res = new QList<Result>();
+        QVector<int> *results;
+        Result r;
         for(int i = 0; i < tests->size(); i++){
-            QVector<int> * results = tests->at(i)->getResults();
+            results = tests->at(i)->getResults();
             for(int j = 0; j < results->size(); j++){
-                Result r;
                 r.name = tests->at(i)->getTestName()+" P"+QString::number(j);
                 r.value = results->at(j);
                 res->append(r);

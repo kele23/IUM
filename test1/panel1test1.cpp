@@ -20,8 +20,10 @@ Panel1Test1::Panel1Test1(QWidget *parent, QString targetWord, QList<QString> *wo
         buttons.at(i)->setText(words->at(i));
 
     ui->label_2->setText("<html><head/><body><p><span style=\"font-size:9pt; font-weight:600;\">" + targetWord + "</span></p></body></html>");
+
+    QPushButton* button;
     foreach(QAbstractButton *b, buttons) {
-        QPushButton* button = (QPushButton*) b;
+        button = (QPushButton*) b;
         b->setProperty("readable",readable);
         connect(button,SIGNAL(clicked()),this,SLOT(wordClicked()));
     }

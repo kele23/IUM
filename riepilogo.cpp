@@ -11,8 +11,9 @@ Riepilogo::Riepilogo(QWidget *parent,QList<Result> *res) :
     loadResults();
 
     QString insert = "";
+    Result r;
     for(int i = 0; i < res->size(); i++){
-        Result r = res->at(i);
+        r = res->at(i);
         this->res->append(r);
         insert +="<P><STRONG>"+r.name+"</STRONG>: "+QString::number(r.value)+"</P>";
     }
@@ -20,7 +21,7 @@ Riepilogo::Riepilogo(QWidget *parent,QList<Result> *res) :
     QMap<QString,int> avg;
     QMap<QString,int> count;
     for(int i = 0; i < this->res->size(); i++){
-        Result r = this->res->at(i);
+        r = this->res->at(i);
         avg.insert(r.name,avg.remove(r.name)+r.value);
         count.insert(r.name,count.remove(r.name)+1);
     }
@@ -60,8 +61,9 @@ void Riepilogo::saveResults(){
 
     stream.writeStartElement("RESULTS");
 
+    Result r;
     for(int i = 0; i < res->size(); i++){
-        Result r = res->at(i);
+        r = res->at(i);
         stream.writeStartElement("TEST");
             //stream.writeAttribute("datetime", "http://qt.nokia.com/");
             stream.writeTextElement("NAME",r.name);
