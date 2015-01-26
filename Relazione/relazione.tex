@@ -45,12 +45,14 @@ Il parametro valutato per entrambi i task è il tempo impiegato per portarli a t
 \section{Realizzazione}
 Il programma è realizzato sulla piattaforma Qt. 
 La gestione dell'esecuzione è affidata alla classe \verb:MainWindow:, che implementa una finestra che può contenere un oggetto \verb:QWidget: e un pulsante per passare alla schermata successiva. In base ai segnali che essa riceve, detemina quale test (e in particolare quale pannello appartenente a quel test) mostrare fino all'ultimo di riepilogo, che per elencare i dati raccolti si serve della classe \verb:Result:.
+
 \verb:MainWindow: si occupa anche del calcolo del tempo trascorso da quando un pannello di un test è mostrato a quando il timer viene resettato per il passaggio alla finestra successiva.
 
 \pagebreak
 
 \section{Test 1}
 Il test 1 verifica la percezione del colore e il pre-attentive processing mostrando un insieme disordinato di parole di due colori diversi e chiedendo l'individuazione di una di queste.
+
 Le parole sono implementate da \verb:QPushButton: senza bordi, disposti disordinatamente all'interno del \verb:QWidget: principale. Il testo dei vari pulsanti è generato leggendo il file \verb:wordslist.txt: e la parola da selezionare è scelta casualmente all'interno della lista.
 La classe grafica che realizza il pannello è \verb:Panel1Test1: e viene istanziata con due diverse combinazioni di colori.
 La figura ~\ref{figura:dialogo1} ne illustra un esempio.
@@ -95,8 +97,8 @@ Il Test 2 verifica la variazione di leggibilità al cambiamento dei colori di sf
 La sua misurazione avviene sulla base del tempo medio che le persone impiegano per leggere due predeterminati testi su schermo, il primo con un accostamento 
 di colori che favorisce la lettura, il secondo con colori che rendono bassa la sua leggibilità.
 
-Al lettore, inoltre, viene chiesto di individuare il numero di occorrenze di alcune parole, ad ogni errore viene aggiunto 500 millisecondi al tempo di lettura,
-questo serve costringere l'utente a leggere completamente il testo e quindi favorisce un esame più veritiero.
+Al lettore, inoltre, viene chiesto di individuare il numero di occorrenze di alcune parole, ad ogni errore commesso vengno aggiunti 500 millisecondi al tempo di lettura,
+questo serve a costringere l'utente a leggere completamente il testo e quindi favorisce un esame più veritiero.
 
 I testi sono creati senza un senso logico per evitare una interpretazione per mezzo di un meccanismo di anticipazione, attraverso il quale
 un lettore immagina ciò che è scritto prima di decifrarlo, questo fatto rende i testi egualmente difficoltosi 
@@ -106,7 +108,7 @@ L'implementazione è avvenuta mediante un \textbf{QTextBrowser} inserito in un p
 un testo formattato in HTML con annesso colore di sfondo e colore delle parole.
 
 I vari testi dei pannelli vengono letti a partire da un file \textit{"exams.txt"} che viene inserito nell'eseguibile durante la compilazione, se necessario, 
-ovviamente seguendo lo stile di formattazione del file stesso, si posso aggiungere altri testi per eseguire verifiche più accurate e o su
+ovviamente seguendo lo stile di formattazione del file stesso, si posso aggiungere altri testi per eseguire verifiche più accurate e/o su
 altri parametri che influiscono sulla leggibilità.
 
 \begin{figure}[http]
