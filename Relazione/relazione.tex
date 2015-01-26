@@ -96,7 +96,7 @@ La sua misurazione avviene sulla base del tempo medio che le persone impiegano p
 di colori che favorisce la lettura, il secondo con colori che rendono bassa la sua leggibilità.
 
 Al lettore, inoltre, viene chiesto di individuare il numero di occorrenze di alcune parole, ad ogni errore viene aggiunto 500 millisecondi al tempo di lettura,
-questo serve costringere l'utente a leggere completamente il testo e quindi favorisce un esame più veritiero.
+il che costringe l'utente a leggere completamente il testo e quindi favorisce un esame più veritiero.
 
 I testi sono creati senza un senso logico per evitare una interpretazione per mezzo di un meccanismo di anticipazione, attraverso il quale
 un lettore immagina ciò che è scritto prima di decifrarlo, questo fatto rende i testi egualmente difficoltosi 
@@ -106,7 +106,7 @@ L'implementazione è avvenuta mediante un \textbf{QTextBrowser} inserito in un p
 un testo formattato in HTML con annesso colore di sfondo e colore delle parole.
 
 I vari testi dei pannelli vengono letti a partire da un file \textit{"exams.txt"} che viene inserito nell'eseguibile durante la compilazione, se necessario, 
-ovviamente seguendo lo stile di formattazione del file stesso, si posso aggiungere altri testi per eseguire verifiche più accurate e o su
+ovviamente seguendo lo stile di formattazione del file stesso, si possono aggiungere altri testi per eseguire verifiche più accurate e o su
 altri parametri che influiscono sulla leggibilità.
 
 \begin{figure}[http]
@@ -131,7 +131,7 @@ altri parametri che influiscono sulla leggibilità.
 		\label{fig:test2_table}
 \end{table}	
 
-La tabella \ref{fig:test2_table} mostra i colori usati per il Test 2, il parametro più importate è il \textit{``val''}:
+La tabella \ref{fig:test2_table} mostra i colori usati per il Test 2:
 \begin{itemize}
 	\item Nel primo caso il colore dello sfondo è il \textit{Blu Scuro} e il colore del testo è il \textit{Bianco}, si può notare come i due  \textit{``val''} siano molto distanti, rendendo molto leggibile il testo.
 	\item Nel secondo caso il colore dello sfondo è il \textit{Bianco} a cui è stato associato, come colore delle parole, il \textit{Giallo}, due colori che hanno un \textit{``val''} molto vicino, questo rende il testo confondibile con lo sfondo  e quindi meno leggibile.
