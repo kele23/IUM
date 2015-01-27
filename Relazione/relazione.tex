@@ -45,12 +45,14 @@ Il parametro valutato per entrambi i task è il tempo impiegato per portarli a t
 \section{Realizzazione}
 Il programma è realizzato sulla piattaforma Qt. 
 La gestione dell'esecuzione è affidata alla classe \verb:MainWindow:, che implementa una finestra che può contenere un oggetto \verb:QWidget: e un pulsante per passare alla schermata successiva. In base ai segnali che essa riceve, detemina quale test (e in particolare quale pannello appartenente a quel test) mostrare fino all'ultimo di riepilogo, che per elencare i dati raccolti si serve della classe \verb:Result:.
+
 \verb:MainWindow: si occupa anche del calcolo del tempo trascorso da quando un pannello di un test è mostrato a quando il timer viene resettato per il passaggio alla finestra successiva.
 
 \pagebreak
 
 \section{Test 1}
 Il test 1 verifica la percezione del colore e il pre-attentive processing mostrando un insieme disordinato di parole di due colori diversi e chiedendo l'individuazione di una di queste.
+
 Le parole sono implementate da \verb:QPushButton: senza bordi, disposti disordinatamente all'interno del \verb:QWidget: principale. Il testo dei vari pulsanti è generato leggendo il file \verb:wordslist.txt: e la parola da selezionare è scelta casualmente all'interno della lista.
 La classe grafica che realizza il pannello è \verb:Panel1Test1: e viene istanziata con due diverse combinazioni di colori.
 La figura ~\ref{figura:dialogo1} ne illustra un esempio.
@@ -133,7 +135,7 @@ altri parametri che influiscono sulla leggibilità.
 
 La tabella \ref{fig:test2_table} mostra i colori usati per il Test 2:
 \begin{itemize}
-	\item Nel primo caso il colore dello sfondo è il \textit{Blu Scuro} e il colore del testo è il \textit{Bianco}, si può notare come i due  \textit{``val''} siano molto distanti, rendendo molto leggibile il testo.
+	\item Nel primo caso il colore dello sfondo è il \textit{Blu Scuro} e il colore del testo è il \textit{Bianco}, si può notare come i due  \textit{``val''} siano molto distanti, il che vuol dire un forte contrasto che rende molto leggibile il testo.
 	\item Nel secondo caso il colore dello sfondo è il \textit{Bianco} a cui è stato associato, come colore delle parole, il \textit{Giallo}, due colori che hanno un \textit{``val''} molto vicino, questo rende il testo confondibile con lo sfondo  e quindi meno leggibile.
 \end{itemize}
 
