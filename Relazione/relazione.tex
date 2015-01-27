@@ -27,7 +27,7 @@
 
 \begin{document}
 \title{Elaborato di Interazione Uomo Macchina}
-\author{Michele Scala \\ Giacomo Annaloro}
+\author{Michele Scala VR386593 \\ Giacomo Annaloro}
 \date{20 gennaio 2015}
 \maketitle
 
@@ -55,7 +55,7 @@ Il test 1 verifica la percezione del colore e il pre-attentive processing mostra
 
 Le parole sono implementate da \verb:QPushButton: senza bordi, disposti disordinatamente all'interno del \verb:QWidget: principale. Il testo dei vari pulsanti è generato leggendo il file \verb:wordslist.txt: e la parola da selezionare è scelta casualmente all'interno della lista.
 La classe grafica che realizza il pannello è \verb:Panel1Test1: e viene istanziata con due diverse combinazioni di colori.
-La figura ~\ref{figura:dialogo1} ne illustra un esempio.
+La figura ~\ref{figura:dialogo2} ne illustra un esempio.
 
 \begin{figure}[http]
 \centering
@@ -104,10 +104,10 @@ I testi sono creati senza un senso logico per evitare una interpretazione per me
 un lettore immagina ciò che è scritto prima di decifrarlo, questo fatto rende i testi egualmente difficoltosi 
 evitando quindi una differenza tempistica sulla base dello stile di scrittura.
 
-L'implementazione è avvenuta mediante un \textbf{QTextBrowser} inserito in un pannello, il quale riceve, nel costruttore dell'oggetto, 
+L'implementazione è avvenuta mediante un \verb:QTextBrowser: inserito in un pannello, il quale riceve, nel costruttore dell'oggetto, 
 un testo formattato in HTML con annesso colore di sfondo e colore delle parole.
 
-I vari testi dei pannelli vengono letti a partire da un file \textit{"exams.txt"} che viene inserito nell'eseguibile durante la compilazione, se necessario, 
+I vari testi dei pannelli vengono letti a partire da un file \verb:exams.txt: che viene inserito nell'eseguibile durante la compilazione, se necessario, 
 ovviamente seguendo lo stile di formattazione del file stesso, si possono aggiungere altri testi per eseguire verifiche più accurate e o su
 altri parametri che influiscono sulla leggibilità.
 
@@ -135,8 +135,8 @@ altri parametri che influiscono sulla leggibilità.
 
 La tabella \ref{fig:test2_table} mostra i colori usati per il Test 2:
 \begin{itemize}
-	\item Nel primo caso il colore dello sfondo è il \textit{Blu Scuro} e il colore del testo è il \textit{Bianco}, si può notare come i due  \textit{``val''} siano molto distanti, il che vuol dire un forte contrasto che rende molto leggibile il testo.
-	\item Nel secondo caso il colore dello sfondo è il \textit{Bianco} a cui è stato associato, come colore delle parole, il \textit{Giallo}, due colori che hanno un \textit{``val''} molto vicino, questo rende il testo confondibile con lo sfondo  e quindi meno leggibile.
+	\item Nel primo caso il colore dello sfondo è il \textit{Blu Scuro} e il colore del testo è il \textit{Bianco}, si può notare come i due  \textit{``val''} ( value ) siano molto distanti, il che vuol dire un forte contrasto di luminosità che rende molto leggibile il testo.
+	\item Nel secondo caso il colore dello sfondo è il \textit{Bianco} a cui è stato associato, come colore delle parole, il \textit{Giallo}, due colori con un value molto vicino, questo, unito al fatto che hanno poco contrasto di colori, rende il testo confondibile con lo sfondo  e quindi meno leggibile.
 \end{itemize}
 
 
