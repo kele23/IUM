@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.13)  3 FEB 2015 21:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/W32TeX) (format=pdflatex 2014.3.13)  3 FEB 2015 22:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1001,20 +1001,20 @@ File: dialogo1.jpg Graphic file (type jpg)
 Package pdftex.def Info: dialogo1.jpg used on input line 116.
 (pdftex.def)             Requested size: 224.2479pt x 183.91045pt.
  [3 <./dialogo1.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
  [4] [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
  (./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 178.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 178.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: 7717DE77F5ED3113BFC4EAEDF26615CE;221.
  ) 
 Here is how much of TeX's memory you used:
- 14635 strings out of 493308
- 283332 string characters out of 6141367
- 335952 words of memory out of 5000000
- 17896 multiletter control sequences out of 15000+600000
+ 14636 strings out of 493308
+ 283341 string characters out of 6141367
+ 336952 words of memory out of 5000000
+ 17897 multiletter control sequences out of 15000+600000
  10447 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,10n,35p,10422b,791s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1025,7 +1025,7 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2013/texmf-dist
 e1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmti10.pfb><c:/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmtt10.pfb>
-Output written on relazione.pdf (5 pages, 201189 bytes).
+Output written on relazione.pdf (5 pages, 202314 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  76 compressed objects within 1 object stream

@@ -147,7 +147,7 @@ La tabella \ref{fig:test2_table} mostra i colori usati per il Test 2:
 \begin{tabular}{lrrrrrr}
 \toprule
 Run & \multicolumn{2}{c}{Test 1} & \multicolumn{2}{c}{Test 2} \\
-& {Giallo-Azzurro} & {Blu-Rosso} & {Blu-Bianco} & {Giallo-Bianco}\\
+& {Giallo-Azzurro} & {Blu-Rosso} & {Blu-Bianco} & {Bianco-Giallo}\\
 \midrule
 1 & 5872 & 3040 & 23422 & 27320 \\
 2 & 4898 & 6520 & 23143 & 24161 \\
@@ -174,5 +174,9 @@ Media & 6019,94 & 5348,94 & 17139,81 & 18415,13 \\
 \label{tabella:risultati}
 \end{table}
 
+Dalla lettura dei valori medi dei tempi impiegati nell'esecuzione del test 1 notiamo che nonostante la pratica d'uso di colori con saturazione elevata sia vivamente sconsigliata, questi rendono comunque più agevole la lettura rispetto a colori poco contrastanti con lo sfondo. L'accostamento di colori primari saturi rende sì più complesso distinguere una parola dall'altra all'interno dell'insieme disordinato, ma resta di maggiore importanza per la lettura la distinzione delle varie parole dallo sfondo.
+Nel caso di migliore leggibilità il risparmio di tempo ammonta a circa il 12\%.
+
+Tale informazione è confermata anche dai valori ottenuti sul test 2: lo sfondo blu scuro abbinato al testo chiaro riduce di oltre 1 secondo il tempo di lettura del testo rispetto alla variante con sfondo chiaro.
 
 \end{document}
