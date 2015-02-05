@@ -88,8 +88,8 @@ Rosso 	& \crule[Rosso_1]{1cm}{0.3cm} & 0	& 202	& 190	\\
 Come si può vedere per entrambi i pannelli sono stati scelti colori con valori molto elevati sia per saturazione che per luminosità. Inoltre per ciascuna delle due combinazioni è stata mantenuta costante la differenza tra tali valori e quelli dello sfondo.
 A variare notevolmente è invece la tonalità:
 \begin{itemize}
-\item nel primo caso sono usati \emph{giallo} e \emph{azzurro}: due colori sottrattivi chiari caratterizzati da uno scarso contrasto con lo sfondo, che quindi rendono le parole confondibili con esso;
-\item nel secondo caso sono usati \emph{blu} e \emph{rosso}: due colori additivi e primari, ben distinguibili dallo sfondo, ma che rendono più difficoltosa la lettura dei caratteri. Proprio il blu e il rosso infatti, sono considerati accostati insieme i meno indicati per la leggibilità del testo. Oltre al fatto che sono entrambi saturi, il blu è da preferire per gli sfondi.
+\item nel primo caso sono usati \emph{giallo} e \emph{azzurro}: due colori chiari caratterizzati da uno scarso contrasto con lo sfondo, che quindi rendono le parole confondibili con esso;
+\item nel secondo caso sono usati \emph{blu} e \emph{rosso}: due colori e primari, ben distinguibili dallo sfondo, ma che rendono più difficoltosa la lettura dei caratteri. Proprio il blu e il rosso infatti, sono considerati accostati insieme i meno indicati per la leggibilità del testo. Oltre al fatto che sono entrambi saturi, il blu è da preferire per gli sfondi.
 \end{itemize}
 
 \section{Test 2}
@@ -167,6 +167,7 @@ Run & \multicolumn{2}{c}{Test 1} & \multicolumn{2}{c}{Test 2} \\
 16 & 11668 & 5494 & 17329 & 17771 \\
 \midrule
 Media & 6019,94 & 5348,94 & 17139,81 & 18415,13 \\
+T-test & 0,565 & & 0,847 & \\
 \bottomrule
 
 \end{tabular}
@@ -174,9 +175,14 @@ Media & 6019,94 & 5348,94 & 17139,81 & 18415,13 \\
 \label{tabella:risultati}
 \end{table}
 
-Dalla lettura dei valori medi dei tempi impiegati nell'esecuzione del test 1 notiamo che nonostante la pratica d'uso di colori con saturazione elevata sia vivamente sconsigliata, questi rendono comunque più agevole la lettura rispetto a colori poco contrastanti con lo sfondo. L'accostamento di colori primari saturi rende sì più complesso distinguere una parola dall'altra all'interno dell'insieme disordinato, ma resta di maggiore importanza per la lettura la distinzione delle varie parole dallo sfondo.
-Nel caso di migliore leggibilità il risparmio di tempo ammonta a circa il 12\%.
+La verifica dei risultati è avvenuta attraverso il T-test di Student, con soglia di significatività \emph{p} = 0,05.
+Per entrambi i test dell'esperimento si ha:
+\begin{itemize}
+\item Alternate Hypothesis HA := il cambio di combinazione di colori fa variare il tempo di lettura;
+\item Null Hypothesis H0 := non esiste una riduzione effettiva del tempo di lettura al variare dei colori dell'interfaccia.
+\end{itemize}
 
-Tale informazione è confermata anche dai valori ottenuti sul test 2: lo sfondo blu scuro abbinato al testo chiaro riduce di oltre 1 secondo il tempo di lettura del testo rispetto alla variante con sfondo chiaro.
+Come si può vedere dal foglio di calcolo allegato, i valori T risultanti sono 0,57 per il Test 1 e 0,85 per il Test 2.
+Data la numerosità campionaria pari a 16 in ogni rilevazione, la tabella della distribuzione T in corrispondenza del grado di libertà 16+16=32 e della soglia minima richiesta 0,05 contiene il valore 1,694. Essendo entrambi i valori di T calcolati minori di tale parametro, dobbiamo accettare la Null Hypothesis, e quindi concludiamo che non c'è una correlazione tra variazione di combinazione di colori e migliore leggibilità (per quanto riguarda Test 1) e tra variazione dei colori e diminuzione del tempo di lettura (per quanto riguarda Test 2).
 
 \end{document}
